@@ -13,7 +13,11 @@ public class MainClass extends Application{
 		FXMLLoader loader = new FXMLLoader(getClass().getResource("mainfx.fxml"));
 		
 		Parent root = loader.load();
+		Controller ctrl = loader.getController();
+		ctrl.setRoot(root);
+		
 		Scene scene = new Scene(root);
+		
 		arg0.setScene(scene);
 		arg0.show();
 	}
