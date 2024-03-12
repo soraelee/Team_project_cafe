@@ -21,6 +21,27 @@ public class MainClass extends Application{
 		arg0.setScene(scene);
 		arg0.show();
 	}
+	public void viewFx(Parent root) {
+		System.out.println("실행");
+		Stage mainStage = (Stage)root.getScene().getWindow(); 
+
+		try {
+			URL url = new URL(URLService.fxPath + "cafe/main/mainfx.fxml");
+			System.out.println(url);
+
+			FXMLLoader loader = new FXMLLoader(url);
+			root = loader.load();
+			Controller ctrl = loader.getController();
+			ctrl.setRoot(root); //root 전달
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		Scene scene = new Scene(root);
+		mainStage.setScene(scene);
+		mainStage.show();
+		
+	}
 	
 	public static void main(String[] args) {
 		launch(args);

@@ -17,5 +17,4 @@ module Team_project_cafe {
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;
-	requires java.sql;
 }
