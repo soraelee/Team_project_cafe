@@ -1,10 +1,13 @@
 module Team_project_cafe {
+	exports cafe.login.find.fxml;
+	exports cafe.login.find.service;
 	exports cafe.login.register.service;
 	exports cafe.main.Service;
 	exports cafe.login.fxml;
 	exports cafe.login.main;
 	exports cafe.login.register.dto;
 	exports cafe.login.url;
+	exports cafe.login.find.main;
 	exports cafe.login.dao;
 	exports cafe.login.register.main;
 	exports cafe.main;
@@ -14,6 +17,7 @@ module Team_project_cafe {
 	exports cafe.login.register.dao;
 
 	requires java.sql;
+	requires javafx.base;
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;

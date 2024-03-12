@@ -2,6 +2,7 @@ package cafe.login.service;
 
 import cafe.login.dao.LoginDAO;
 import cafe.login.dto.LoginDTO;
+import cafe.login.find.main.FindMain;
 import cafe.login.register.main.RegisterMain;
 import cafe.main.MainClass;
 import javafx.fxml.FXML;
@@ -65,7 +66,9 @@ public class loginServiceImpl implements loginService{
 
 	@Override
 	public void findFunc() {
-		
+		System.out.println("--- 로그인 -> 비밀번호찾기---");
+		FindMain fm = new FindMain();
+		fm.viewfx(root);
 	}
 	@Override
 	public void mainFunc() {
