@@ -12,10 +12,9 @@ import javafx.stage.Stage;
 public class MainClass {
 
 	public void viewFx(Parent root) {
-		System.out.println("로그인 루트");
-		Stage loginStage = (Stage)root.getScene().getWindow(); // 여기서 막힘
+		System.out.println("실행");
+		Stage loginStage = (Stage)root.getScene().getWindow(); 
 
-		System.out.println("로그인 루트22");
 		try {
 			URL url = new URL(URLService.fxPath + "cafe/login/fxml/loginFXML.fxml");
 			System.out.println(url);
