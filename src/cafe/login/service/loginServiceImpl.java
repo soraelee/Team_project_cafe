@@ -5,6 +5,7 @@ import cafe.login.dto.LoginDTO;
 import cafe.login.find.main.FindMain;
 import cafe.login.register.main.RegisterMain;
 import cafe.main.MainClass;
+import cafe.menu.dto.MenuDTO;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
 import javafx.scene.control.Alert;
@@ -27,6 +28,7 @@ public class loginServiceImpl implements loginService{
 		this.root = root;
 		System.out.println("로그인 하부코드");
 	}
+	
 
 	@Override
 	public void loginFunc(TextField id, PasswordField pwd) {
@@ -38,6 +40,8 @@ public class loginServiceImpl implements loginService{
 		LoginDTO dto = dao.getUser(id.getText());
 		
 		System.out.println("dto : " + dto);// 있는 값을 꺼내는 경우 객체값, 아닌경우 null 
+		
+		
 		
 		String msg = null;
 		
@@ -62,6 +66,8 @@ public class loginServiceImpl implements loginService{
 		System.out.println("---로그인 -> 회원가입 ---");
 		RegisterMain rm = new RegisterMain();
 		rm.viewfx(root);
+		
+
 	}
 
 	@Override

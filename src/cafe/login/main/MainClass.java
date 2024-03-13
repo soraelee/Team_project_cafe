@@ -12,17 +12,16 @@ import javafx.stage.Stage;
 public class MainClass {
 
 	public void viewFx(Parent root) {
-		System.out.println("실행");
 		Stage loginStage = (Stage)root.getScene().getWindow(); 
 
 		try {
 			URL url = new URL(URLService.fxPath + "cafe/login/fxml/loginFXML.fxml");
-			System.out.println(url);
 
 			FXMLLoader loader = new FXMLLoader(url);
 			root = loader.load();
-			System.out.println("로그인 루트33");
+			
 			LoginController ctrl = loader.getController();
+			
 			ctrl.setRoot(root); //root 전달
 			
 			
