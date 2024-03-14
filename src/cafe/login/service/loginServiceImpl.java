@@ -5,6 +5,7 @@ import cafe.login.dto.LoginDTO;
 import cafe.login.find.main.FindMain;
 import cafe.login.register.main.RegisterMain;
 import cafe.main.MainClass;
+import cafe.manage.main.ManageMain;
 import cafe.menu.dto.MenuDTO;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -35,7 +36,6 @@ public class loginServiceImpl implements loginService{
 		System.out.println(" --- 서비스 로그인 확인 --- ");
 		System.out.println("id : " + id.getText());
 		System.out.println("pwd : " + pwd.getText());
-//		LoginDTO dto = LoginDAO.db.get(id.getText());
 		
 		LoginDTO dto = dao.getUser(id.getText());
 		
@@ -58,6 +58,9 @@ public class loginServiceImpl implements loginService{
 		}
 		alert.setContentText(msg);
 		alert.show();
+		
+		ManageMain mm = new ManageMain();
+		mm.viewFx(root);
 		
 	}
 

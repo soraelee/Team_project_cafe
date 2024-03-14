@@ -15,6 +15,7 @@ public class LoginDAO {
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs ;
+	public static String managerId;
 	
 	public LoginDAO() {
 		String driver = "oracle.jdbc.driver.OracleDriver";
@@ -35,6 +36,7 @@ public class LoginDAO {
 	
 	public LoginDTO getUser(String id) {
 		LoginDTO dto = null;
+		LoginDAO.managerId = id;
 		String sql = "select managerid, managerpwd, managername from manager_table where managerid = ?";
 		try {
 			ps = con.prepareStatement(sql);
@@ -87,7 +89,6 @@ public class LoginDAO {
 		}
 		return dto;
 	}
-	
 
 	
 }
