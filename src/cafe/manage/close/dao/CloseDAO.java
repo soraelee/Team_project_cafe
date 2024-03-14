@@ -17,7 +17,7 @@ public class CloseDAO {
 	private ResultSet rs ;
 	
 	public CloseDAO() {String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@192.168.42.91:1521:orcl";
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 		String id = "c##sorae", pwd = "1234";
 		
 		try {
@@ -77,7 +77,7 @@ public class CloseDAO {
 		}
 		return result;
 	}
-	public int getTotalOrder() {
+	public ArrayList<CloseDTO> getTotalOrder() {
 		String sql = "select * from totalorder";
 		ArrayList<CloseDTO> arr = new ArrayList<CloseDTO>();
 		
@@ -86,15 +86,16 @@ public class CloseDAO {
 			rs = ps.executeQuery();
 			
 			while(rs.next()) {
-				CloseDTO dto = new CloseDTO();
+				CloseDTO dto = new CloseDTO(rs.getString("productid"), rs.getString("productid"), rs.getString("coffee_type"),
+						rs.getString("totcnt"), rs.getString("totprice"), rs.getString("manageid"));
 				
+				arr.add(dto);
 			}
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		return 0;
+		return arr;
 	}
 
 	

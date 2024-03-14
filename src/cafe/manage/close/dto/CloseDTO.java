@@ -3,6 +3,18 @@ package cafe.manage.close.dto;
 public class CloseDTO {
 	private String productid, product, coffee_type, totcnt, totprice, managerid;
 
+	
+	public CloseDTO() {}
+	public CloseDTO(String productid, String product, String coffee_type, String totcnt, String totprice, String managerid) {
+		this.productid = productid;
+		this.product = product;
+		this.coffee_type = coffee_type;
+		this.totcnt = totcnt; 
+		this.totprice = totprice;
+		this.managerid = managerid;
+	}
+	
+	
 	public String getProductid() {
 		return productid;
 	}
