@@ -1,27 +1,41 @@
 package stockDTO;
 
+
 public class DTO {
-	private String productid, product, coffee_type, cnt, price;
+	private String productld, product, price, coffee_type, cnt;
 	
-	public DTO(String productid, String product, String coffee_type, String cnt, String price) {
-		this.productid = productid ; this.product = product; this.coffee_type = coffee_type;
-		this.price = price;
+	public DTO() {
+		
 	}
+	
+	public DTO(String productld, String product, String coffee_type, String cnt, String price ) {
+	this.productld = productld ; this.price = price; this.coffee_type = coffee_type;
+	this.product = product; this.cnt = cnt;
+}
 
-	public String getProductid() {
-		return productid;
-	}
-
-	public void setProductid(String productid) {
-		this.productid = productid;
-	}
-
+	
 	public String getProduct() {
 		return product;
 	}
 
 	public void setProduct(String product) {
 		this.product = product;
+	}
+
+	public String getProductld() {
+		return productld;
+	}
+
+	public void setProductld(String productld) {
+		this.productld = productld;
+	}
+
+	public String getPrice() {
+		return price;
+	}
+
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
 	public String getCoffee_type() {
@@ -39,14 +53,9 @@ public class DTO {
 	public void setCnt(String cnt) {
 		this.cnt = cnt;
 	}
-
-	public String getPrice() {
-		return price;
-	}
-
-	public void setPrice(String price) {
-		this.price = price;
-	}
 	
+
+
+
 	
 }

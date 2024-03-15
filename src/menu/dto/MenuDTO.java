@@ -1,11 +1,17 @@
-package stockAdd;
-
-public class addDTO {
-private String productid, product, coffee_type, cnt, price;
+package menu.dto;
+//메뉴판 내용
+public class MenuDTO {
+	private String productid, product, coffee_type;
+	private int price;
 	
-	public addDTO(String productid, String product, String coffee_type, String cnt, String price) {
-		this.productid = productid ; this.product = product; this.coffee_type = coffee_type;
-		this.cnt = cnt;
+	public MenuDTO() {
+	}
+	
+	public MenuDTO(String productid,  String product, String coffee_type, int price) {
+		this.productid = productid;
+		this.product = product;
+		this.coffee_type = coffee_type;
+
 		this.price = price;
 	}
 
@@ -33,23 +39,13 @@ private String productid, product, coffee_type, cnt, price;
 		this.coffee_type = coffee_type;
 	}
 
-	public String getCnt() {
-		return cnt;
-	}
-
-	public void setCnt(String cnt) {
-		this.cnt = cnt;
-	}
-
-	public String getPrice() {
+	public int getPrice() {
 		return price;
 	}
 
-	public void setPrice(String price) {
+	public void setPrice(int price) {
 		this.price = price;
 	}
-
-
 
 	
 	

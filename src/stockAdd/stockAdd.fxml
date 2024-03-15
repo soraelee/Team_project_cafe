@@ -22,14 +22,11 @@
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
                   <Label alignment="CENTER" prefHeight="30.0" prefWidth="118.0" text="상품명" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="115.0" text="가격" GridPane.rowIndex="1" />
-                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="118.0" text="개수" GridPane.rowIndex="2" />
-                  <TextField fx:id="price" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="num" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="118.0" text="개수" GridPane.rowIndex="1" />
+                  <TextField fx:id="num" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="stockAdd" GridPane.columnIndex="1" />
                  
                   
@@ -44,7 +41,7 @@
                   <Insets />
                </opaqueInsets>
             </Button>
-            <Button layoutX="255.0" layoutY="6.0" mnemonicParsing="false" onAction="#cancellFunc" prefHeight="22.0" prefWidth="67.0" text="취소">
+            <Button layoutX="255.0" layoutY="6.0" mnemonicParsing="false" onAction="#cancellFunc" prefHeight="22.0" prefWidth="67.0" text="뒤로">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>

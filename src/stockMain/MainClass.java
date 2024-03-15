@@ -34,6 +34,29 @@ public class MainClass extends Application{
 		arg0.show();
 	
 	}
+	public void viewFx(Parent root) {
+		Stage stockStage = (Stage)root.getScene().getWindow();
+		try {
+		
+			URL url = new URL(URLService.stkpath + "stock_fxml/stock.fxml");
+			FXMLLoader loader = new FXMLLoader(url);
+			
+			root = loader.load();
+//			System.out.println("root확인 :"+root);
+			
+			Controller ctrl = loader.getController();
+			ctrl.setRoot(root);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+//		System.out.println("roott : " + root) ;
+		Scene scene = new Scene(root);
+		stockStage.setScene(scene);
+		stockStage.show();
+	}
+	
 	
 public static void main(String[] args) {
 	launch(args);

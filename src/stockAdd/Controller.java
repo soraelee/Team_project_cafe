@@ -10,7 +10,6 @@ import javafx.scene.control.TextField;
 
 public class Controller implements Initializable{
 	@FXML public TextField stockAdd; //** public 잊지말고 꼭 넣기....
-	@FXML public TextField price;
 	@FXML public TextField num;
 	
 	Parent root;
@@ -28,7 +27,7 @@ public class Controller implements Initializable{
 	
 	public void addFunc() {
 		System.out.println("추가 버튼 클릭");
-		sv.addFunc(stockAdd,price,num);
+		sv.addFunc(stockAdd, num);
 	}
 	
 	public void cancellFunc() {

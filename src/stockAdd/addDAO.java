@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import menu.dto.MenuDTO;
+
 public class addDAO {
 	
 	private Connection con;
@@ -28,13 +30,13 @@ public class addDAO {
 		}
 	}
 	
-	public int addFun(addDTO dto) {
-		String sql = "insert into manager_table values(?, ?, ?, ?, ?)";
+	public int addFun(addDTO dto) { 
+		String sql = "insert into inventory values(?, ?, ?, ?, ?)";
 		int result = 0;
 		try {
 			ps = con.prepareStatement(sql);
 			ps.setString(1, dto.getProductid());
-			ps.setString(2, dto.getPrice());
+			ps.setString(2, dto.getProduct());
 			ps.setString(3, dto.getCoffee_type());
 			ps.setString(4, dto.getCnt());
 			ps.setString(5, dto.getPrice());
@@ -46,5 +48,25 @@ public class addDAO {
 		System.out.println(dto);
 		return result;
 
+	}
+	
+public MenuDTO getMenu(String name) {
+		
+		MenuDTO dto = null;
+		String sql = "select * from menu where product = ?";
+		try {
+			ps = con.prepareStatement(sql);
+			ps.setString(1, name);
+			rs = ps.executeQuery();
+			if (rs.next()) {
+				dto = new MenuDTO(rs.getString("productid"), rs.getString("product"),
+						rs.getString("coffee_type"), rs.getInt("price"));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		System.out.println(dto);
+		return dto;
 	}
 }
