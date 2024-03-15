@@ -42,4 +42,5 @@ public class PaymentServiceImpl implements PaymentService{
 		CashPaymentMain cpm = new CashPaymentMain();
 		cpm.viewFx(root);
 	}
+	
 }

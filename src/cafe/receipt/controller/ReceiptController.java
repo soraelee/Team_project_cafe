@@ -35,6 +35,7 @@ public class ReceiptController implements Initializable{
 	@FXML public Label fxtotCnt;
     @FXML public Label fxtotPrice;
     @FXML public Label fxOrderNum;
+    @FXML public Label fxDate;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -63,7 +64,7 @@ public class ReceiptController implements Initializable{
     	PaymentController.totPrice = totPrice.toString();
     	
     	fxOrderNum.setText(OrderServiceImpl.orderStrNum);
-    	
+    	fxDate.setText(rs.dateFunc());
 	}
     	
 	public void setRoot(Parent root) {

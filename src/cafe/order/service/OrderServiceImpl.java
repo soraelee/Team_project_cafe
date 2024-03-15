@@ -21,11 +21,11 @@ public class OrderServiceImpl implements OrderService{
 	public static ArrayList<OrderDTO> OrderMenu ;
 	public static String orderStrNum;
 	private Integer orderNum;
-	private Integer orderN;
+	private static int orderN;
 	
 	public OrderServiceImpl() {
 		dao = new OrderDAO();
-		orderN = 0;
+		
 		
 	}
 	
@@ -79,15 +79,14 @@ public class OrderServiceImpl implements OrderService{
 		ArrayList<OrderDTO> menu = new ArrayList<>();
 		
 		
-//		orderNum = orderN;
-//		orderStrNum = orderN.toString();
-//		orderNum = dao.getInt(orderStrNum);
-//		System.out.println("ordernum : " + orderNum);
-//		orderNum++;
-//		System.out.println("ordernum : " + orderNum);
-//		orderN = orderNum;
-//		orderStrNum = orderN.toString();
-//		System.out.println("orderStrnum : " + orderStrNum);
+		orderNum = ++orderN;
+		System.out.println("ordernum : " + orderNum);
+		orderStrNum = orderNum.toString();
+		System.out.println("orderStrnum : " + orderStrNum);
+		orderNum = dao.getInt(orderStrNum);
+		orderN = (int)orderNum;
+		System.out.println("ordernum : " + orderNum);
+		orderStrNum = orderNum.toString();
 
 		//OrderDTO dto = new OrderDTO();
 		if( chkame.isSelected() == true ) {

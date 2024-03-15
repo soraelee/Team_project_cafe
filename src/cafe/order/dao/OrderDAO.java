@@ -25,7 +25,7 @@ public class OrderDAO {
 
 	public OrderDAO() {
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@192.168.42.91:1521:orcl";
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 		String id = "c##sorae", pwd = "1234";
 		try {
 			Class.forName( driver );

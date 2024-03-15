@@ -5,4 +5,5 @@ import javafx.scene.Parent;
 public interface ReceiptService {
 	public void setRoot(Parent root);
 	public void backFunc();
+	public String dateFunc();
 }
