@@ -24,10 +24,8 @@ public class LoginDAO {
 		
 		try {
 			Class.forName(driver);
-			System.out.println("로그인 드라이브 로드 성공");
 			
 			con = DriverManager.getConnection(url, id, pwd);
-			System.out.println("로그인 DB 연결 성공");
 			
 		} catch (Exception e) {
 			e.printStackTrace();

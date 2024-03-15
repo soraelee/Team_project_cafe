@@ -4,6 +4,8 @@ import cafe.login.main.MainClass;
 import cafe.manage.close.dao.CloseDAO;
 import cafe.manage.close.main.CloseMain;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 
 public class ManageServiceImpl implements ManageService {
 	Parent root;
@@ -15,6 +17,7 @@ public class ManageServiceImpl implements ManageService {
 	
 	@Override
 	public void setRoot(Parent root) {
+		
 		this.root = root;
 		
 	}
@@ -31,8 +34,16 @@ public class ManageServiceImpl implements ManageService {
 		System.out.println("총 주문 내역 : "+ a);
 		int b = cdao.setManagerid();
 		System.out.println("매니저 아이디 : "+ b);
-		CloseMain cm = new CloseMain();
-		cm.viewFx(root);
+		
+		if(a == 0) {
+			Alert alert = new Alert(AlertType.INFORMATION);
+			String msg = "마감 내역이 없습니다." ;
+			alert.setContentText(msg);
+		}else {
+			CloseMain cm = new CloseMain();
+			cm.viewFx(root);
+		}
+		
 	}
 
 	@Override

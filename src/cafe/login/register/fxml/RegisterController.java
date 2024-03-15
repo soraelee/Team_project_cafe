@@ -17,7 +17,6 @@ public class RegisterController implements Initializable {
 		rs = new RegisterServiceImpl(); 
 	}
 	public void registerFunc() {
-		System.out.println("회원가입 완료 버튼");
 		rs.registerFunc();
 		
 	}
@@ -26,7 +25,6 @@ public class RegisterController implements Initializable {
 		this.root = root;
 	}
 	public void backFunc() {
-		System.out.println("뒤로 가기 버튼");
 		rs.backFunc();
 	}
 

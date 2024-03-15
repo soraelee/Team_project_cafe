@@ -14,7 +14,6 @@ public class FindMain {
 		Stage findStage = (Stage)root.getScene().getWindow();
 		try {
 			URL url = new URL(URLService.fxPath + "cafe/login/find/fxml/findFXML.fxml"); 
-			System.out.println(url);
 			FXMLLoader loader = new FXMLLoader(url);
 			root = loader.load();
 			FindController ctrl = loader.getController();

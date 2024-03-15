@@ -14,7 +14,6 @@ public class RegisterMain {
 		Stage registerStage = (Stage)root.getScene().getWindow();
 		try {
 			URL url = new URL(URLService.fxPath + "cafe/login/register/fxml/RegisterFXML.fxml");
-			System.out.println(url);
 			
 			FXMLLoader loader = new FXMLLoader(url);
 			root = loader.load();

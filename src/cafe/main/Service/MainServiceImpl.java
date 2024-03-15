@@ -16,7 +16,6 @@ public class MainServiceImpl implements MainService{
 		System.out.println("---직원 서비스 실행---");
 		
 		MainClass lm = new MainClass();
-		System.out.println("루트 전달" + root);
 		lm.viewFx(root);
 		
 	}

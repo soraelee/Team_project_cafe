@@ -31,7 +31,6 @@ public class RegisterServiceImpl implements RegisterService{
 //	@Override
 	public void registerFunc() {
 		
-		System.out.println("실행222222");
 		
 		fxId = (TextField)root.lookup("#fxId");
 		fxName = (TextField)root.lookup("#fxName");
@@ -60,22 +59,23 @@ public class RegisterServiceImpl implements RegisterService{
 			msg = "휴대폰 번호를 확인하세요";
 		}else {
 			msg = "회원가입이 완료되었습니다";
+			
+			LoginDTO dto = new LoginDTO();
+			
+			dto.setManagerid(fxId.getText());
+			dto.setManagerpwd(fxPwd.getText());
+			dto.setManagername(fxName.getText());
+			dto.setBirth(fxBirth.getText());
+			dto.setPhone(fxPhone.getText());
+			
+			dao.setUser(dto);
+			
+			MainClass lm = new MainClass();
+			lm.viewFx(root);
 		}
 		alert.setContentText(msg);
 		alert.show();
 		
-		LoginDTO dto = new LoginDTO();
-		
-		dto.setManagerid(fxId.getText());
-		dto.setManagerpwd(fxPwd.getText());
-		dto.setManagername(fxName.getText());
-		dto.setBirth(fxBirth.getText());
-		dto.setPhone(fxPhone.getText());
-		
-		dao.setUser(dto);
-	
-		MainClass lm = new MainClass();
-		lm.viewFx(root);
 	}
 
 	@Override

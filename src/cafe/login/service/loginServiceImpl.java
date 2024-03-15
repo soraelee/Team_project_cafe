@@ -39,10 +39,6 @@ public class loginServiceImpl implements loginService{
 		
 		LoginDTO dto = dao.getUser(id.getText());
 		
-		System.out.println("dto : " + dto);// 있는 값을 꺼내는 경우 객체값, 아닌경우 null 
-		
-		
-		
 		String msg = null;
 		
 		Alert alert = new Alert(AlertType.INFORMATION);
@@ -50,6 +46,8 @@ public class loginServiceImpl implements loginService{
 		if (dto != null) {
 			if (dto.getManagerpwd().equals(pwd.getText())) {
 				msg = dto.getManagername()	+ "님 인증 성공!";
+				ManageMain mm = new ManageMain();
+				mm.viewFx(root);
 			} else {
 				msg = "비밀번호 틀림!";
 			}
@@ -59,8 +57,7 @@ public class loginServiceImpl implements loginService{
 		alert.setContentText(msg);
 		alert.show();
 		
-		ManageMain mm = new ManageMain();
-		mm.viewFx(root);
+		
 		
 	}
 

@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="367.0" prefWidth="578.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="cafe.login.register.fxml.RegisterController">
+<AnchorPane prefHeight="367.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.login.register.fxml.RegisterController">
    <children>
       <Label layoutX="232.0" layoutY="55.0" text="회원가입">
          <font>
@@ -24,12 +23,12 @@
       <PasswordField fx:id="fxPwd" layoutX="105.0" layoutY="192.0" />
       <PasswordField fx:id="fxPwdChk" layoutX="368.0" layoutY="192.0" />
       <Label layoutX="49.0" layoutY="252.0" text="생년월일" />
-      <PasswordField fx:id="fxBirth" layoutX="105.0" layoutY="248.0" prefHeight="22.0" prefWidth="107.0" />
       <Label layoutX="218.0" layoutY="259.0" text="(예. 901010)" textFill="#0000005d" />
       <Label layoutX="292.0" layoutY="252.0" text="휴대폰 번호" />
-      <PasswordField fx:id="fxPhone" layoutX="368.0" layoutY="248.0" prefHeight="22.0" prefWidth="161.0" />
       <Label layoutX="368.0" layoutY="281.0" text="'-' 미포함" textFill="#0000005d" />
       <Button fx:id="btnRegisterComp" layoutX="166.0" layoutY="308.0" mnemonicParsing="false" onAction="#registerFunc" prefHeight="37.0" prefWidth="120.0" text="회원 가입 완료" />
       <Button layoutX="296.0" layoutY="308.0" mnemonicParsing="false" onAction="#backFunc" prefHeight="37.0" prefWidth="120.0" text="뒤로 가기" />
+      <TextField fx:id="fxBirth" layoutX="105.0" layoutY="248.0" prefHeight="22.0" prefWidth="110.0" />
+      <TextField fx:id="fxPhone" layoutX="368.0" layoutY="248.0" prefHeight="22.0" prefWidth="161.0" />
    </children>
 </AnchorPane>

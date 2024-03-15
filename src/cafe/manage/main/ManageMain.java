@@ -16,7 +16,6 @@ public class ManageMain {
 		
 		try {
 			URL url = new URL(URLService.fxPath + "cafe/manage/fxml/manageFXML.fxml");
-			System.out.println(url);
 			FXMLLoader loader = new FXMLLoader(url);
 			
 			root = loader.load();

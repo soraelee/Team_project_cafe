@@ -25,22 +25,17 @@ public class LoginController implements Initializable{
 
 	
 	public void idFunc() {
-		System.out.println("아이디 입력");
 	}
 	public void pwdFunc() {
-		System.out.println("아이디 입력");
 	}
 	
 	public void loginFunc() {
-		System.out.println("로그인 버튼");
 		ls.loginFunc(id, pwd);
 	}
 	public void registerFunc() {
-		System.out.println("회원가입 버튼");
 		ls.registerFunc();
 	}
 	public void findFunc() {
-		System.out.println("아이디 비밀번호 찾기 버튼");
 		ls.findFunc();
 	}
 	
