@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.order.controller.OrderController">
+   <children>
+      <Label layoutX="138.0" layoutY="15.0" text="메뉴를 선택해 주세요.">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="chkame" layoutX="143.0" layoutY="87.0" mnemonicParsing="false" text="아메리카노(3,000)" />
+      <CheckBox fx:id="chkcappu" layoutX="143.0" layoutY="114.0" mnemonicParsing="false" text="카푸치노(3,000)" />
+      <CheckBox fx:id="chkespres" layoutX="143.0" layoutY="140.0" mnemonicParsing="false" text="에스프레소(3,000)" />
+      <CheckBox fx:id="chkcafelatte" layoutX="143.0" layoutY="165.0" mnemonicParsing="false" text="카페라떼(4,000)" />
+      <CheckBox fx:id="chkgreentea" layoutX="143.0" layoutY="191.0" mnemonicParsing="false" text="녹차라떼(5,000)" />
+      <CheckBox fx:id="chkchoco" layoutX="143.0" layoutY="216.0" mnemonicParsing="false" text="초코라떼(4,000)" />
+      <CheckBox fx:id="chkstraw" layoutX="143.0" layoutY="242.0" mnemonicParsing="false" text="딸기라떼(4,500)" />
+      <CheckBox fx:id="chkearlg" layoutX="143.0" layoutY="268.0" mnemonicParsing="false" text="얼그레이(3,000)" />
+      <CheckBox fx:id="chkchamo" layoutX="143.0" layoutY="295.0" mnemonicParsing="false" text="캐모마일(3,000)" />
+      <CheckBox fx:id="chkpepper" layoutX="143.0" layoutY="322.0" mnemonicParsing="false" text="페퍼민트(3,000)" />
+      <TextField fx:id="amecnt" layoutX="272.0" layoutY="83.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="cappucnt" layoutX="272.0" layoutY="110.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="esprescnt" layoutX="272.0" layoutY="136.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="cafelattecnt" layoutX="272.0" layoutY="161.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="greenteacnt" layoutX="272.0" layoutY="187.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="chococnt" layoutX="272.0" layoutY="212.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="strawcnt" layoutX="272.0" layoutY="238.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="earlgcnt" layoutX="272.0" layoutY="264.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="chamocnt" layoutX="272.0" layoutY="291.0" prefHeight="22.0" prefWidth="42.0" />
+      <TextField fx:id="peppercnt" layoutX="272.0" layoutY="318.0" prefHeight="22.0" prefWidth="42.0" />
+      <Button fx:id="order" layoutX="206.0" layoutY="359.0" mnemonicParsing="false" onAction="#orderFunc" text="주문하기">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="191.0" layoutY="61.0" text="메뉴" />
+      <Label layoutX="278.0" layoutY="61.0" text="수량" />
+   </children>
+</AnchorPane>
