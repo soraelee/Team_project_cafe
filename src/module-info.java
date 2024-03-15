@@ -1,4 +1,4 @@
-module Team_project_coffee {
+module Team_project_cafe {
 	exports menu.dto;
 	exports stockDTO;
 	exports stockURL;
