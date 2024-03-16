@@ -20,7 +20,7 @@ public class DAO {
 
 	public DAO() {
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@192.168.42.91:1521:orcl";
+		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 		String id = "c##sorae", pwd = "1234";
 
 		try {
@@ -79,7 +79,7 @@ public class DAO {
 				DTO dto = new DTO();
 				
 				dto = new DTO(rs.getString("productid") ,rs.getString("product"), rs.getString("coffee_type"), 
-						rs.getString("cnt"), rs.getString("price"));
+						rs.getString("sumcnt"), rs.getString("sumprice"));
 				arr.add(dto);
 				
 			}

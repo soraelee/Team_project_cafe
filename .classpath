@@ -11,7 +11,12 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/핀테크_설송희1_31/sqldeveloper-23.1.1.345.2114-x64/sqldeveloper/sqldeveloper/lib/ojdbc11.jar">
+	<classpathentry kind="lib" path="C:/Users/sorae/eclipse-java/eclipse/ojdbc11.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/My_javafx">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>

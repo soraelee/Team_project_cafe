@@ -76,8 +76,10 @@ public class Controller implements Initializable{
 
 
 		ArrayList<DTO> arr = da.invenSearch();	
+		System.out.println(arr);
 	
 		listL.getItems().setAll(arr);
+		System.out.println(listL);
 		
 		btnSearch.setOnAction(new EventHandler<ActionEvent>() {
 			

@@ -2,6 +2,8 @@ package stockAdd;
 
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import menu.dto.MenuDTO;
@@ -44,13 +46,22 @@ public class addServiceImpl implements serviceAdd{
 		System.out.println("num : " +num.getText());
 		MenuDTO dt = dao.getMenu(stockAdd.getText());
 		
-		Integer price = dt.getPrice() * Integer.parseInt(num.getText());
+		Alert alert = new Alert(AlertType.INFORMATION);
+		String msg = null;
+		if (dt == null) {
+			msg = "해당 메뉴명이 존재하지 않습니다.";
+		} else {
+			int a = dao.addFun(num.getText(), dt.getProductid());
+			System.out.println("  ----  : " + a);
+			msg = stockAdd.getText() + " 메뉴가 " + num.getText() + "잔 추가 되었습니다.";
+		}
+		alert.setContentText(msg);
+		alert.show();
+//		Integer price = dt.getPrice() * Integer.parseInt(num.getText());
 		
 		
-		addDTO dto = new addDTO(dt.getProductid(), stockAdd.getText(), dt.getCoffee_type(), 
-				num.getText(), price.toString());
-		int a = dao.addFun(dto);
-		System.out.println("  ----  : " + a);
+//		addDTO dto = new addDTO(dt.getProductid(), stockAdd.getText(), dt.getCoffee_type(), 
+//				num.getText(), price.toString());
 
 	}
 	
