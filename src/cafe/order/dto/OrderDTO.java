@@ -13,7 +13,9 @@ public class OrderDTO {
 		this.customerid = customerid;
 		
 	}
-	
+	public OrderDTO () {
+		
+	}
 	
 	
 	public String getCustomerid() {

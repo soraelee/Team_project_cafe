@@ -28,7 +28,7 @@ public class CloseServiceImpl implements CloseService{
 	@Override
 	public void closeFunc(Parent root) {
 		CloseDAO dao = new CloseDAO();
-//		dao.deleteOrderList();
+		dao.deleteOrderList();
 		dao.deleteTotalOrderList();
 		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setContentText("마감이 완료되었습니다.");

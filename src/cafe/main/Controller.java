@@ -18,6 +18,7 @@ public class Controller implements Initializable{
 	MainService mains;
 	
 	public void setRoot(Parent root) {
+		mains.setRoot(root);
 		this.root = root;
 	}
 	
@@ -26,11 +27,10 @@ public class Controller implements Initializable{
 		mains = new MainServiceImpl();
 	}
 	public void cusFunc() {
-		System.out.println("고객 버튼" + root);
-		
+		mains.cusFunc();
 	}
 	public void empFunc() {
-		mains.empFunc(root);
+		mains.empFunc();
 	}
 
 }

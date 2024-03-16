@@ -24,6 +24,8 @@ public class ManageServiceImpl implements ManageService {
 
 	@Override
 	public void stockFunc() {
+		stockMain.MainClass sm = new stockMain.MainClass();
+		sm.viewFx(root);
 		
 	}
 

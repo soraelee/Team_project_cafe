@@ -3,6 +3,7 @@ package stockService;
 import java.util.ArrayList;
 import java.util.List;
 
+import cafe.manage.main.ManageMain;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -78,8 +79,14 @@ public class ServieceImpl implements Serviece{
 	@Override
 	public void cancelFunc(Parent root) {
 		System.out.println("물품추가창 닫기");
-		Stage stage = (Stage)root.getScene().getWindow();
-		stage.close();
+		//아예 닫을 경우
+//		Stage stage = (Stage)root.getScene().getWindow();
+//		stage.close();
+		
+		//직원 메인으로 이동하는 경우
+		ManageMain mm = new ManageMain();
+		mm.viewFx(root);
+		
 	}
 
 
