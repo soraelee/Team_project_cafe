@@ -2,13 +2,14 @@ package stockMain;
 
 import java.net.URL;
 
+import cafe.url.URLService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import stockController.Controller;
-import stockURL.URL.URLService;
+
 
 
 public class MainClass extends Application{
@@ -20,7 +21,7 @@ public class MainClass extends Application{
 //		System.out.println
 //		("file:/" +((Paths.get("").toAbsolutePath().toString())+"/bin/stock_control/stock.fxml"));
 		
-		URL url = new URL(URLService.stkpath + "stock_fxml/stock.fxml");
+		URL url = new URL(URLService.fxPath + "stock_fxml/stock.fxml");
 		
 		
 		FXMLLoader loader = new FXMLLoader(url);
@@ -38,7 +39,7 @@ public class MainClass extends Application{
 		Stage stockStage = (Stage)root.getScene().getWindow();
 		try {
 		
-			URL url = new URL(URLService.stkpath + "stock_fxml/stock.fxml");
+			URL url = new URL(URLService.fxPath + "stock_fxml/stock.fxml");
 			FXMLLoader loader = new FXMLLoader(url);
 			
 			root = loader.load();

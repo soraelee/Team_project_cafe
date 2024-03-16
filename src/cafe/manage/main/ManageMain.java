@@ -2,8 +2,8 @@ package cafe.manage.main;
 
 import java.net.URL;
 
-import cafe.login.url.URLService;
 import cafe.manage.fxml.ManageController;
+import cafe.url.URLService;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

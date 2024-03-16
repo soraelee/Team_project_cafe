@@ -29,7 +29,6 @@ import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 import menu.dto.MenuDTO;
-import search.main.SearchMain;
 import stockAdd.addDAO;
 import stockAdd.addDTO;
 import stockDAO.DAO;

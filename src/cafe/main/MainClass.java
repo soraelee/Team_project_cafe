@@ -3,7 +3,7 @@ package cafe.main;
 import java.net.URL;
 
 import cafe.login.fxml.LoginController;
-import cafe.login.url.URLService;
+import cafe.url.URLService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;

@@ -6,4 +6,5 @@ import javafx.scene.control.TextField;
 public interface OrderService {
 	public void setRoot(Parent root);
 	public void orderFunc();
+	public void homeFunc();
 }

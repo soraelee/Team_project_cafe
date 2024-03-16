@@ -44,4 +44,7 @@ public class OrderController implements Initializable{
 		System.out.println("주문하기 버튼");
 		os.orderFunc();
 	}
+	public void homeFunc() {
+		os.homeFunc();
+	}
 }

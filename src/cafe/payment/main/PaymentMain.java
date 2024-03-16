@@ -3,10 +3,9 @@ package cafe.payment.main;
 import java.net.URL;
 import java.util.List;
 
-import cafe.order.url.OrderURLservice;
 import cafe.payment.controller.CashPaymentController;
-//import cafe.payment.controller.CashPaymentController;
 import cafe.payment.controller.PaymentController;
+import cafe.url.URLService;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,7 +17,7 @@ public class PaymentMain {
 		Stage PaymentStage = (Stage)root.getScene().getWindow();
 		
 		try {
-			URL url = new URL( OrderURLservice.fxPath + "cafe/payment/fxml/payment.fxml" );
+			URL url = new URL( URLService.fxPath + "cafe/payment/fxml/payment.fxml" );
 			
 			FXMLLoader loader = new FXMLLoader( url) ;
 			root = loader.load();

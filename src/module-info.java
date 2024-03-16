@@ -7,8 +7,6 @@ module Team_project_cafe {
 	exports cafe.order.controller;
 	exports cafe.payment.controller;
 	exports cafe.manage.close.main;
-	exports cafe.order.url;
-	exports cafe.login.url;
 	exports cafe.login.find.main;
 	exports cafe.payment.main;
 	exports cafe.receipt.service;
@@ -18,8 +16,8 @@ module Team_project_cafe {
 	exports stockDAO;
 	exports cafe.order.dao;
 	exports cafe.order.dto;
-	exports search.main;
 	exports cafe.login.dto;
+	exports cafe.url;
 	exports cafe.manage.fxml;
 	exports menu.dto;
 	exports stockDTO;
@@ -28,18 +26,15 @@ module Team_project_cafe {
 	exports cafe.main.Service;
 	exports stockAdd;
 	exports cafe.login.fxml;
-	exports cafe.receipt.dao;
 	exports stockService;
 	exports cafe.login.main;
 	exports stockController;
 	exports cafe.order.main;
 	exports cafe.login.dao;
-	exports stockURL;
 	exports cafe.login.register.main;
 	exports cafe.main;
 	exports cafe.manage.close.fxml;
 	exports cafe.manage.service;
-	exports cafe.receipt.dto;
 	exports cafe.manage.close.dao;
 	exports cafe.manage.main;
 	exports cafe.order.service;

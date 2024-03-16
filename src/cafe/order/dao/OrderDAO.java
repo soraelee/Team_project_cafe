@@ -1,5 +1,6 @@
 package cafe.order.dao;
 
+import java.lang.reflect.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -96,5 +97,46 @@ public class OrderDAO {
 		dto.setCoffee_type(gdto.getCoffee_type());		
 		dto.setCustomerid(orderNum);		
 		return dto;		
+	}
+	public int delStock( ArrayList<OrderDTO> menu ) {
+		int i = 0;
+		String sql = "update inventory set cnt = (cnt - ?), "
+				+ "price = (price - ? * (select price from menu where productid = ?)) "
+				+ "where productid = ?";
+		int result = 0;
+		try {
+			for (OrderDTO dto : menu) {
+				ps = con.prepareStatement(sql);
+				ps.setString(1, dto.getCnt() );
+				ps.setString(2, dto.getCnt());
+				ps.setString(3, dto.getProductId() );
+				ps.setString(4, dto.getProductId() );
+				result = ps.executeUpdate();
+				i++;
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return i;
+	}
+	public ArrayList<String> searchStock(ArrayList<OrderDTO> menu) {
+		ArrayList<String> stockLoss = new ArrayList<String>();
+		int result = 0;
+		String sql = "select productid from inventory where cnt <= 5 and productid = ?";
+		try {
+			for (OrderDTO dto : menu) {
+				ps = con.prepareStatement(sql);
+				ps.setString(1, dto.getProductId() );
+				
+				result = ps.executeUpdate();
+				if (result > 0) {
+					stockLoss.add(dto.getProduct());
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return stockLoss;
 	}
 }

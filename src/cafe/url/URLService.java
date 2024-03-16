@@ -1,4 +1,4 @@
-package cafe.login.url;
+package cafe.url;
 
 import java.nio.file.Paths;
 

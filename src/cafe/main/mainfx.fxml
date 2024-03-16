@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="291.0" prefWidth="469.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="cafe.main.Controller">
+<AnchorPane prefHeight="291.0" prefWidth="469.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.main.Controller">
    <children>
       <Button fx:id="customer" layoutX="81.0" layoutY="108.0" mnemonicParsing="false" onAction="#cusFunc" prefHeight="135.0" prefWidth="122.0" text="고객">
          <font>
@@ -18,9 +17,9 @@
             <Font size="30.0" />
          </font>
       </Button>
-      <Label layoutX="157.0" layoutY="50.0" text="it Hello 카페">
+      <Label layoutX="94.0" layoutY="49.0" text="지혜설희소래네 카페">
          <font>
-            <Font size="28.0" />
+            <Font name="Dotum" size="30.0" />
          </font>
       </Label>
    </children>

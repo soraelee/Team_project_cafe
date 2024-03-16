@@ -4,8 +4,8 @@ import java.net.URL;
 import java.nio.file.Paths;
 
 import cafe.order.controller.OrderController;
-import cafe.order.url.OrderURLservice;
 import cafe.payment.controller.PaymentController;
+import cafe.url.URLService;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,11 +16,6 @@ public class OrderMain extends Application{
 	
 	@Override
 	public void start(Stage arg0) throws Exception {
-//		FXMLLoader loader = new FXMLLoader( getClass().getResource("order.fxml") );
-//		System.out.println( getClass().getResource("") );
-		
-//		System.out.println( Paths.get("").toAbsolutePath().toString() );
-//		System.out.println( "file:/" + (Paths.get("").toAbsolutePath().toString()) + "/bin/cafe/order/fxml/order.fxml" );
 		
 		URL url = new URL( "file:/" + (Paths.get("").toAbsolutePath().toString()) + "/bin/cafe/order/fxml/order.fxml" );
 		
@@ -38,7 +33,7 @@ public class OrderMain extends Application{
 		Stage OrderStage = (Stage)root.getScene().getWindow();
 		
 		try {
-			URL url = new URL( OrderURLservice.fxPath + "cafe/order/fxml/order.fxml" );
+			URL url = new URL( URLService.fxPath + "cafe/order/fxml/order.fxml" );
 			
 			FXMLLoader loader = new FXMLLoader( url) ;
 			root = loader.load();

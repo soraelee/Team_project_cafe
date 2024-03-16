@@ -21,7 +21,6 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import search.main.SearchMain;
 import stockAdd.AddMainClass;
 import stockController.Controller;
 import stockDAO.DAO;
