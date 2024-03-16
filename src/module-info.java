@@ -23,6 +23,15 @@ module Team_project_cafe {
 	exports cafe.manage.main;
 	exports cafe.login.register.fxml;
 	exports cafe.login.service;
+	exports menu.dto;
+	exports stockDTO;
+	exports stockURL;
+	exports stockAdd;
+	exports stockDAO;
+	exports stockService;
+	exports search.main;
+	exports stockController;
+	exports stockMain;
 
 	requires java.sql;
 	requires javafx.base;
