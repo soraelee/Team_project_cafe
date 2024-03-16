@@ -1,6 +1,7 @@
 package cafe.manage.close.fxml;
 
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -9,6 +10,8 @@ import cafe.manage.close.dao.CloseDAO;
 import cafe.manage.close.dto.CloseDTO;
 import cafe.manage.close.service.CloseService;
 import cafe.manage.close.service.CloseServiceImpl;
+import cafe.menu.dto.MenuDTO;
+import cafe.order.dto.OrderDTO;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -31,6 +34,8 @@ public class CloseController implements Initializable{
 	@FXML public TableColumn<CloseDTO, String> fxPrice;
 	@FXML public Label fxTotalCnt;
 	@FXML public Label fxTotalPrice;
+	@FXML public Label fxCusCnt;
+	@FXML public Label fxDay;
 	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -52,7 +57,7 @@ public class CloseController implements Initializable{
 	}
 
 	private void setValues() {
-		
+		String cusNum = dao.getOrder();
 		Integer finCnt = 0, finPrice = 0;
 		
 		for (CloseDTO dto : arr) {
@@ -61,6 +66,15 @@ public class CloseController implements Initializable{
 		}
 		fxTotalCnt.setText(finCnt.toString());
 		fxTotalPrice.setText(finPrice.toString());
+		fxCusCnt.setText(cusNum);
+		
+		long time = System.currentTimeMillis();
+		System.out.println(time);
+		SimpleDateFormat si = 
+				new SimpleDateFormat("yyyy-MM-dd");
+		String s = si.format(time);
+		
+		fxDay.setText(s);
 	}
 
 	public void setRoot(Parent root) {

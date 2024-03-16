@@ -1,8 +1,19 @@
 package cafe.order.dto;
 
 public class OrderDTO {
-	private String productId, product, coffee_type, cnt;
+	private String productId, product, coffee_type, cnt, customerid;
 	private int price ;
+	
+	public OrderDTO (String productId, String product, String coffee_type, String cnt, int price, String customerid) {
+		this.productId = productId;
+		this.product = product;
+		this.coffee_type = coffee_type;
+		this.cnt = cnt;
+		this.price = price ;
+		this.customerid = customerid;
+		
+	}
+	
 	
 	public String getProductId() {
 		return productId;

@@ -4,6 +4,10 @@ public class MenuDTO {
 	private String productid, product, coffee_type;
 	private int price;
 	
+	public MenuDTO() {
+		
+	}
+	
 	public MenuDTO(String productid,  String product, String coffee_type, int price) {
 		this.productid = productid;
 		this.product = product;

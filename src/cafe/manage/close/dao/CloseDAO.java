@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import cafe.login.dao.LoginDAO;
 import cafe.manage.close.dto.CloseDTO;
+import cafe.menu.dto.MenuDTO;
 import cafe.order.dto.OrderDTO;
 import javafx.collections.ObservableArray;
 
@@ -97,7 +98,7 @@ public class CloseDAO {
 			
 			while(rs.next()) {
 				CloseDTO dto = new CloseDTO(rs.getString("productid"), rs.getString("product"), rs.getString("coffee_type"),
-						rs.getString("totcnt"), rs.getString("totprice"), rs.getString("managerid"));
+						rs.getString("totcnt"), rs.getString("totprice"), rs.getString("managerid"), rs.getString("productid"));
 				
 				arr.add(dto);
 			}
@@ -106,6 +107,21 @@ public class CloseDAO {
 			e.printStackTrace();
 		}
 		return arr;
+	}
+	public String getOrder() {
+		String customerNum = null;
+		String sql = "select max(customerid) id from orderlist";
+		try {
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+			
+			while (rs.next()) {
+				customerNum = rs.getString("id");
+			}
+		}catch (Exception e) {
+			e.printStackTrace();		
+			}
+		return customerNum;
 	}
 	
 
