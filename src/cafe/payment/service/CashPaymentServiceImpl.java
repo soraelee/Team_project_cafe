@@ -24,13 +24,13 @@ public class CashPaymentServiceImpl implements CashPaymentService{
 	@Override
 	public void receivedFunc(TextField receivedTextField, Label changeLable) {
 		System.out.println("주문 내역 라벨링 시작");
-		int amount = Integer.parseInt(PaymentController.totPrice);
-        int received = Integer.parseInt(receivedTextField.getText());
 		
         if(receivedTextField.getText().isEmpty()) {
         	changeLable.setText("숫자를 입력해주세요.");
         }
         else {
+        	int amount = Integer.parseInt(PaymentController.totPrice);
+        	int received = Integer.parseInt(receivedTextField.getText());
         	if (received >= amount) {
         		int change = received - amount;
         		changeLable.setText("거스름돈 : " + change);
