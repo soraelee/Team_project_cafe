@@ -6,15 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="300.0" prefWidth="200.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="cafe.payment.controller.CashPaymentController">
+<AnchorPane prefHeight="300.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cafe.payment.controller.CashPaymentController">
 	<!-- TODO Add Nodes -->
 	<VBox alignment="CENTER" layoutY="1.0" prefHeight="300.0" prefWidth="200.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1">
     <Label text="[현금 결제]" />
     <Label text="결제 금액:" />
       <Label fx:id="paymentAmount" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CCCCCC;" textAlignment="CENTER" />
     <Label text="받은 돈:" />
-    <TextField fx:id="receivedTextField" alignment="CENTER" prefHeight="40.0" prefWidth="193.0" />
+    <TextField fx:id="receivedTextField" alignment="CENTER" onAction="#receivedFunc" prefHeight="40.0" prefWidth="193.0" />
     <Button onAction="#handlePayment" text="결제" />
-    <Label fx:id="changeLabel" />
+    <Label fx:id="changeLabel" alignment="CENTER" prefHeight="14.0" prefWidth="164.0" textAlignment="CENTER" />
 </VBox>
 </AnchorPane>

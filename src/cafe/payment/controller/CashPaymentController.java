@@ -18,23 +18,23 @@ public class CashPaymentController implements Initializable {
     @FXML public TextField receivedTextField;
     @FXML public Label changeLabel;
     @FXML public void handlePayment() {
-        try {
-            double amount = Double.parseDouble(PaymentController.totPrice);//(amountTextField.getText());//(amountTextField.setText(totPrice.toString());//(amountTextField.getText());//	fxtotPrice.setText(totPrice.toString());
-            double received = Double.parseDouble(receivedTextField.getText());
-
-            if (received >= amount) {
-                double change = received - amount;
-                changeLabel.setText("거스름돈 : " + change);
-                // 주문서(대기번호 출력 화면) 전환
+//        try {
+//            double amount = Double.parseDouble(PaymentController.totPrice);//(amountTextField.getText());//(amountTextField.setText(totPrice.toString());//(amountTextField.getText());//	fxtotPrice.setText(totPrice.toString());
+//            double received = Double.parseDouble(receivedTextField.getText());
+//
+//            if (received >= amount) {
+//                double change = received - amount;
+//                changeLabel.setText("거스름돈 : " + change);
+//                // 주문서(대기번호 출력 화면) 전환
                 cps.handlePayment();
                 
-            } else {
-                changeLabel.setText("받은 돈이 부족합니다.");
-            }
-        } catch (NumberFormatException e) {
-            changeLabel.setText("숫자를 입력해주세요.");
-        }
-        
+//            } else {
+//                changeLabel.setText("받은 돈이 부족합니다.");
+//            }
+//        } catch (NumberFormatException e) {
+//            changeLabel.setText("숫자를 입력해주세요.");
+//        }
+//        
         
         
     }
@@ -49,5 +49,8 @@ public class CashPaymentController implements Initializable {
 		this.root = root;
 	}
 	public void cntFunc() {
+	}
+	public void receivedFunc() {
+		cps.receivedFunc(receivedTextField, changeLabel);
 	}
 }
