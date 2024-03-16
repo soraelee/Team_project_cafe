@@ -1,5 +1,6 @@
 package menu.dto;
 //메뉴판 내용
+
 public class MenuDTO {
 	private String productid, product, coffee_type;
 	private int price;
@@ -11,7 +12,6 @@ public class MenuDTO {
 		this.productid = productid;
 		this.product = product;
 		this.coffee_type = coffee_type;
-
 		this.price = price;
 	}
 
@@ -46,8 +46,4 @@ public class MenuDTO {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-
-	
-	
-
 }

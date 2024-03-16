@@ -15,6 +15,13 @@ public class OrderDTO {
 	}
 	
 	
+	
+	public String getCustomerid() {
+		return customerid;
+	}
+	public void setCustomerid(String customerid) {
+		this.customerid = customerid;
+	}
 	public String getProductId() {
 		return productId;
 	}
