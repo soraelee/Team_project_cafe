@@ -1,6 +1,7 @@
 <h2>카페 프로젝트</h2>
 
 <h4>개발환경</h4>
+
 - JAVA 11
 
 - IDE : Eclipse
@@ -16,6 +17,7 @@
 ![image](https://github.com/soraelee/Team_project_cafe/assets/145763590/426475c7-098a-4a48-8b56-4e795d377e1c)
 
 <h4>업무 분담</h4>
+
 - 팀원 : 3명
 
 | 팀원 명 | 업무 |
@@ -31,7 +33,6 @@
 ![image](https://github.com/soraelee/Team_project_cafe/assets/145763590/d8c05c6b-48d3-47f0-b39e-1af446c5e478)
 
 <h2>프로그램 구성</h2>
-<hr>
 
 ![image](https://github.com/soraelee/Team_project_cafe/assets/145763590/7d30060f-b430-4f8b-b319-4bd80fd78078)
 
